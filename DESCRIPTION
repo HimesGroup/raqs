@@ -1,11 +1,24 @@
 Package: raqs
-Title: What the Package Does (One Line, Title Case)
+Title: An R interface to the US EPA Air Quality System (AQS) API
 Version: 0.0.0.9000
-Authors@R:
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Authors@R: c(
+           person(given = "Jaehyun",
+           family = "Joo",
+           role = c("aut", "cre"),
+           email = "jaehyun.joo@outlook.com"),
+           person(given = "Blanca",
+           family = "Himes",
+           role = c("aut"))
+           )
+Description: Offers functions for fetching JSON data from the US EPA Air Quality
+             System (AQS) API. See
+             <https://aqs.epa.gov/aqsweb/documents/data_api.html> for details of
+             the AQS API.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports:
+    httr2
+Depends:
+    R (>= 4.0)
