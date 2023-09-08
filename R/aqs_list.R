@@ -35,12 +35,8 @@
 ##'   will be coerced to a string with leading zeros if necessary (e.g., 89 ->
 ##'   "089"). A list of the county codes within each state can be obtained via
 ##'   [list_countiesbystate].
-##' @param site A string specifying the 4-digit AQS site number within the
-##'   county. An integer will be coerced to a string with leading zeros if
-##'   necessary (e.g., 14 -> "0014"). A list of the site codes within each
-##'   county can be obtained via [list_sitesbycounty].
-##' @param classes A string specifying the AQS parameter class name. A list of
-##'   the class names can be obtained via [list_classes].
+##' @param pc A string specifying the AQS parameter class name. A list of the
+##'   class names can be obtained via [list_classes].
 ##' @param email A string specifying the email address of the requester. If you
 ##'   set your email and key with [set_aqs_user], you don't have to specify
 ##'   this.

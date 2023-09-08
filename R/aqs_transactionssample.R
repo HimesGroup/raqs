@@ -44,18 +44,16 @@
 ##'   county. An integer will be coerced to a string with leading zeros if
 ##'   necessary (e.g., 14 -> "0014"). A list of the site codes within each
 ##'   county can be obtained via [list_sitesbycounty].
-##' @param minlat A string or numeric value specifying the minimum latitude of a
-##'   geographic box. Decimal latitude with north being positive.
-##' @param maxlat A string or numeric value specifying the maximum latitude of a
-##'   geographic box. Decimal latitude with north being positive.
-##' @param minlon A string or numeric value specifying the minimum longitude of
-##'   a geographic box. Decimal longitude with east being positive.
-##' @param maxlon A string or numeric value specifying the maximum longitude of
-##'   a geographic box. Decimal longitude with east being positive.
 ##' @param agency A string specifying the AQS Monitoring Agency (MA) code. A
 ##'   list of the MA codes can be obtained via [list_mas]. Here, we named this
 ##'   input as `agency` instead of "ma" because `agency` is actually used in the
 ##'   API endpoint URL.
+##' @param email A string specifying the email address of the requester. If you
+##'   set your email and key with [set_aqs_user], you don't have to specify
+##'   this.
+##' @param key A string specifying the key matching the email address for the
+##'   requester. If you set your email and key with [set_aqs_user], you don't
+##'   have to specify this.
 ##' @param ... Reserved for future use.
 ##'
 ##' @return A data.frame containing parsed data or a named list containing
@@ -83,8 +81,7 @@
 ##'
 ##' @export
 aqs_transactionssample <- function(aqs_filter = c("bySite", "byCounty",
-                                                  "byState", "byPQAO",
-                                                  "byMA"),
+                                                  "byState", "byMA"),
                                    aqs_variables = NULL, header = FALSE, ...) {
   aqs_filter <- .match.arg(aqs_filter)
   aqs_variables <- c(.fill_user_to_list(as.list(aqs_variables)), header = header)
@@ -94,7 +91,6 @@ aqs_transactionssample <- function(aqs_filter = c("bySite", "byCounty",
     bySite = do.call(transactionssample_bysite, aqs_variables),
     byCounty = do.call(transactionssample_bycounty, aqs_variables),
     byState = do.call(transactionssample_bystate, aqs_variables),
-    byPQAO = do.call(transactionssample_bypqao, aqs_variables),
     byMA = do.call(transactionssample_byma, aqs_variables)
   )
 }

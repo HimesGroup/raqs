@@ -127,6 +127,14 @@ county. An integer will be coerced to a string with leading zeros if
 necessary (e.g., 14 -> "0014"). A list of the site codes within each
 county can be obtained via \link{list_sitesbycounty}.}
 
+\item{email}{A string specifying the email address of the requester. If you
+set your email and key with \link{set_aqs_user}, you don't have to specify
+this.}
+
+\item{key}{A string specifying the key matching the email address for the
+requester. If you set your email and key with \link{set_aqs_user}, you don't
+have to specify this.}
+
 \item{cbdate}{(optional) A string specifying the change begin date in
 YYYYMMDD format to subset data based on "date of last change" in database.
 Only data that changed on or after this date will be returned.}

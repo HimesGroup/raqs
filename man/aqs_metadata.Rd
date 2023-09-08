@@ -52,6 +52,14 @@ information from the API header. Default is \code{FALSE} to return data only.}
 
 \item{...}{Reserved for future use.}
 
+\item{email}{A string specifying the email address of the requester. If you
+set your email and key with \link{set_aqs_user}, you don't have to specify
+this.}
+
+\item{key}{A string specifying the key matching the email address for the
+requester. If you set your email and key with \link{set_aqs_user}, you don't
+have to specify this.}
+
 \item{service}{A string specifying one of the services available (e.g.,
 sampleData)}
 }

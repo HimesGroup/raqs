@@ -9,7 +9,7 @@
 \title{AQS API Sample Data Transaction service}
 \usage{
 aqs_transactionssample(
-  aqs_filter = c("bySite", "byCounty", "byState", "byPQAO", "byMA"),
+  aqs_filter = c("bySite", "byCounty", "byState", "byMA"),
   aqs_variables = NULL,
   header = FALSE,
   ...
@@ -103,22 +103,18 @@ county. An integer will be coerced to a string with leading zeros if
 necessary (e.g., 14 -> "0014"). A list of the site codes within each
 county can be obtained via \link{list_sitesbycounty}.}
 
+\item{email}{A string specifying the email address of the requester. If you
+set your email and key with \link{set_aqs_user}, you don't have to specify
+this.}
+
+\item{key}{A string specifying the key matching the email address for the
+requester. If you set your email and key with \link{set_aqs_user}, you don't
+have to specify this.}
+
 \item{agency}{A string specifying the AQS Monitoring Agency (MA) code. A
 list of the MA codes can be obtained via \link{list_mas}. Here, we named this
 input as \code{agency} instead of "ma" because \code{agency} is actually used in the
 API endpoint URL.}
-
-\item{minlat}{A string or numeric value specifying the minimum latitude of a
-geographic box. Decimal latitude with north being positive.}
-
-\item{maxlat}{A string or numeric value specifying the maximum latitude of a
-geographic box. Decimal latitude with north being positive.}
-
-\item{minlon}{A string or numeric value specifying the minimum longitude of
-a geographic box. Decimal longitude with east being positive.}
-
-\item{maxlon}{A string or numeric value specifying the maximum longitude of
-a geographic box. Decimal longitude with east being positive.}
 }
 \value{
 A data.frame containing parsed data or a named list containing

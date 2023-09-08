@@ -74,6 +74,28 @@
   x
 }
 
+.convert_output <- function(x, type = c("tibble", "data.table")) {
+  type <- match.arg(type)
+  if (!requireNamespace(type, quietly = TRUE)) {
+    warning(type, " is not installed. Returned 'data.frame'.", call. = FALSE)
+    return(x)
+  }
+  if (type == "tibble") {
+    if (is.data.frame(x)) {
+      return(tibble::as_tibble(x))
+    } else {
+      return(lapply(x, tibble::as_tibble))
+    }
+  }
+  if (type == "data.table") {
+    if (is.data.frame(x)) {
+      return(data.table::setDT(x))
+    } else {
+      return(lapply(x, data.table::setDT))
+    }
+  }
+}
+
 .match.arg <- function(arg, choices, several.ok = FALSE, ignore.case = TRUE) {
   if (missing(choices)) {
     formal.args <- formals(sys.function(sysP <- sys.parent()))
@@ -121,3 +143,23 @@
   choices[i]
 }
 
+.is_nonnegative_number <- function(x) {
+  x <- suppressWarnings(as.numeric(x))
+  if (!is.numeric(x) || is.na(x) || x < 0L || length(x) != 1L) {
+    stop("Please use a non-negative number of length 1.")
+  }
+}
+
+## Simple sleep with pb bar for consistency with req_throttle
+.sys_sleep_pb <- function(x) {
+  .is_nonnegative_number(x)
+  x <- round(x)
+  if (x == 0) return(invisible())
+  cli_progress_bar(format = "Waiting {x}s {pb_bar}", total = x)
+  for (i in seq_len(x)) {
+    Sys.sleep(1)
+    cli_progress_update()
+  }
+  cli_progress_done()
+  invisible()
+}

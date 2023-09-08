@@ -45,14 +45,6 @@
 ##'   county. An integer will be coerced to a string with leading zeros if
 ##'   necessary (e.g., 14 -> "0014"). A list of the site codes within each
 ##'   county can be obtained via [list_sitesbycounty].
-##' @param minlat A string or numeric value specifying the minimum latitude of a
-##'   geographic box. Decimal latitude with north being positive.
-##' @param maxlat A string or numeric value specifying the maximum latitude of a
-##'   geographic box. Decimal latitude with north being positive.
-##' @param minlon A string or numeric value specifying the minimum longitude of
-##'   a geographic box. Decimal longitude with east being positive.
-##' @param maxlon A string or numeric value specifying the maximum longitude of
-##'   a geographic box. Decimal longitude with east being positive.
 ##' @param pqao A string specifying the AQS Primary Quality Assurance
 ##'   Organization (PQAO) code. A list of the PQAO codes can be obtained via
 ##'   [list_pqaos].
@@ -60,6 +52,12 @@
 ##'   list of the MA codes can be obtained via [list_mas]. Here, we named this
 ##'   input as `agency` instead of "ma" because `agency` is actually used in the
 ##'   API endpoint URL.
+##' @param email A string specifying the email address of the requester. If you
+##'   set your email and key with [set_aqs_user], you don't have to specify
+##'   this.
+##' @param key A string specifying the key matching the email address for the
+##'   requester. If you set your email and key with [set_aqs_user], you don't
+##'   have to specify this.
 ##' @param ... Reserved for future use.
 ##'
 ##' @return A data.frame containing parsed data or a named list containing

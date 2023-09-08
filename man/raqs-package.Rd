@@ -6,7 +6,7 @@
 \alias{raqs-package}
 \title{raqs: An R interface to the US EPA Air Quality System (AQS) API}
 \description{
-Offers functions for fetching JSON data from the US EPA Air Quality System (AQS) API. See \url{https://aqs.epa.gov/aqsweb/documents/data_api.html} for details of the AQS API.
+Offers functions for fetching JSON data from the US EPA Air Quality System (AQS) API with options to comply with the API rate-limits. See \url{https://aqs.epa.gov/aqsweb/documents/data_api.html} for details of the AQS API.
 }
 \details{
 The 'raqs' package provides an R interface to the US EPA AQS API that
@@ -15,7 +15,7 @@ for the AQS API and get your API key. Please check \link{aqs_signup} and
 \link{set_aqs_user} to set up your API credentials in R.
 
 All main functions, for fetching data from the AQS API, were named with the
-following scheme: {aqs}_{service}
+following scheme: \verb{aqs_\{service\}}
 \itemize{
 \item \link{aqs_metadata} returns information about the API.
 \item \link{aqs_list} returns variable values you may need to create other service
@@ -31,7 +31,7 @@ EPA.
 measured values) at several concentration levels for gaseous criteria
 pollutants.
 \item \link{aqs_qablanks} returns concentrations from blank samples.
-\item \link{aqs_collocatedassessments} returns pairs of PM samples collected at the
+\item \link{aqs_qacollocatedassessments} returns pairs of PM samples collected at the
 same time and place by different samplers.
 \item \link{aqs_qaflowrateverifications} returns flow rate checks performed by
 monitoring agencies.
@@ -47,8 +47,16 @@ at several concentration levels in the transaction format for AQS.
 
 Each main function has a set of underlying functions that are responsible
 for sending requests to specific endpoints (service/filter) and were name
-with the following scheme: {service}_{filter}. Please refer to the manual to
-see how the aforementioned functions work.
+with the following scheme: \verb{\{service\}_\{filter\}}. Please refer to the manual
+to see how the aforementioned functions work.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/HimesGroup/raqs}
+  \item Report bugs at \url{https://github.com/HimesGroup/raqs/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Jaehyun Joo \email{jaehyun.joo@outlook.com}

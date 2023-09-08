@@ -61,6 +61,12 @@
 ##'   a geographic box. Decimal longitude with east being positive.
 ##' @param cbsa A string specifying the AQS CBSA code. A list of the CBSA codes
 ##'   can be obtained via [list_cbsas].
+##' @param email A string specifying the email address of the requester. If you
+##'   set your email and key with [set_aqs_user], you don't have to specify
+##'   this.
+##' @param key A string specifying the key matching the email address for the
+##'   requester. If you set your email and key with [set_aqs_user], you don't
+##'   have to specify this.
 ##' @param cbdate (optional) A string specifying the change begin date in
 ##'   YYYYMMDD format to subset data based on "date of last change" in database.
 ##'   Only data that changed on or after this date will be returned.

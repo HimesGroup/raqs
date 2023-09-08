@@ -93,13 +93,8 @@ will be coerced to a string with leading zeros if necessary (e.g., 89 ->
 "089"). A list of the county codes within each state can be obtained via
 \link{list_countiesbystate}.}
 
-\item{site}{A string specifying the 4-digit AQS site number within the
-county. An integer will be coerced to a string with leading zeros if
-necessary (e.g., 14 -> "0014"). A list of the site codes within each
-county can be obtained via \link{list_sitesbycounty}.}
-
-\item{classes}{A string specifying the AQS parameter class name. A list of
-the class names can be obtained via \link{list_classes}.}
+\item{pc}{A string specifying the AQS parameter class name. A list of the
+class names can be obtained via \link{list_classes}.}
 }
 \value{
 A data.frame containing parsed data or a named list containing

@@ -114,28 +114,22 @@ county. An integer will be coerced to a string with leading zeros if
 necessary (e.g., 14 -> "0014"). A list of the site codes within each
 county can be obtained via \link{list_sitesbycounty}.}
 
-\item{minlat}{A string or numeric value specifying the minimum latitude of a
-geographic box. Decimal latitude with north being positive.}
+\item{email}{A string specifying the email address of the requester. If you
+set your email and key with \link{set_aqs_user}, you don't have to specify
+this.}
 
-\item{maxlat}{A string or numeric value specifying the maximum latitude of a
-geographic box. Decimal latitude with north being positive.}
+\item{key}{A string specifying the key matching the email address for the
+requester. If you set your email and key with \link{set_aqs_user}, you don't
+have to specify this.}
 
-\item{minlon}{A string or numeric value specifying the minimum longitude of
-a geographic box. Decimal longitude with east being positive.}
+\item{pqao}{A string specifying the AQS Primary Quality Assurance
+Organization (PQAO) code. A list of the PQAO codes can be obtained via
+\link{list_pqaos}.}
 
-\item{maxlon}{A string or numeric value specifying the maximum longitude of
-a geographic box. Decimal longitude with east being positive.}
-
-\item{cbsa}{A string specifying the AQS CBSA code. A list of the CBSA codes
-can be obtained via \link{list_cbsas}.}
-
-\item{cbdate}{(optional) A string specifying the change begin date in
-YYYYMMDD format to subset data based on "date of last change" in database.
-Only data that changed on or after this date will be returned.}
-
-\item{cedate}{(optional) A string specifying the change end date in YYYYMMDD
-format to subset data based on "date of last change" in database. Only
-data that changed on or before this date will be returned.}
+\item{agency}{A string specifying the AQS Monitoring Agency (MA) code. A
+list of the MA codes can be obtained via \link{list_mas}. Here, we named this
+input as \code{agency} instead of "ma" because \code{agency} is actually used in the
+API endpoint URL.}
 }
 \value{
 A data.frame containing parsed data or a named list containing

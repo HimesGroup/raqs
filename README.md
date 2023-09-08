@@ -1,5 +1,7 @@
 # raqs
 
-An R interface to the US EPA AQS API to fetch data in JSON format.
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/HimesGroup/raqs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/HimesGroup/raqs/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
-This package will be a dependency for PARGASITE.
+An R interface to the US EPA AQS API to fetch data in JSON format.

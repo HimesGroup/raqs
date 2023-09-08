@@ -23,6 +23,12 @@
 ##'   information from the API header. Default is `FALSE` to return data only.
 ##' @param service A string specifying one of the services available (e.g.,
 ##'   sampleData)
+##' @param email A string specifying the email address of the requester. If you
+##'   set your email and key with [set_aqs_user], you don't have to specify
+##'   this.
+##' @param key A string specifying the key matching the email address for the
+##'   requester. If you set your email and key with [set_aqs_user], you don't
+##'   have to specify this.
 ##' @param ... Reserved for future use.
 ##'
 ##' @return A data.frame containing parsed data or a named list containing

@@ -6,7 +6,7 @@
 ##' [set_aqs_user] to set up your API credentials in R.
 ##'
 ##' All main functions, for fetching data from the AQS API, were named with the
-##' following scheme: {aqs}_{service}
+##' following scheme: `aqs_{service}`
 ##' - [aqs_metadata] returns information about the API.
 ##' - [aqs_list] returns variable values you may need to create other service
 ##' requests.
@@ -21,7 +21,7 @@
 ##' measured values) at several concentration levels for gaseous criteria
 ##' pollutants.
 ##' - [aqs_qablanks] returns concentrations from blank samples.
-##' - [aqs_collocatedassessments] returns pairs of PM samples collected at the
+##' - [aqs_qacollocatedassessments] returns pairs of PM samples collected at the
 ##' same time and place by different samplers.
 ##' - [aqs_qaflowrateverifications] returns flow rate checks performed by
 ##' monitoring agencies.
@@ -36,9 +36,11 @@
 ##'
 ##' Each main function has a set of underlying functions that are responsible
 ##' for sending requests to specific endpoints (service/filter) and were name
-##' with the following scheme: {service}_{filter}. Please refer to the manual to
-##' see how the aforementioned functions work.
+##' with the following scheme: `{service}_{filter}`. Please refer to the manual
+##' to see how the aforementioned functions work.
 ##'
 ##' @importFrom httr2 request req_perform req_url_path_append req_url_query
-##'   resp_body_json req_error
+##'   resp_body_json req_error req_throttle
+##' @importFrom cli cli_progress_bar cli_progress_update cli_progress_done
+##'   pb_bar
 "_PACKAGE"

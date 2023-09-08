@@ -60,7 +60,7 @@ get_aqs_email <- function() {
 get_aqs_key <- function() {
   key <- Sys.getenv("AQS_KEY")
   if (!.is_nonempty_str(key)) {
-    stop("Empty string",
+    stop("Empty string found! ",
          "Please set your registered key using `set_aqs_user(email, key)`")
   }
   key
