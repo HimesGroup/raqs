@@ -1,6 +1,6 @@
 Package: raqs
-Title: An R interface to the US EPA Air Quality System (AQS) API
-Version: 0.0.0.9000
+Title: An R Interface to the US EPA Air Quality System (AQS) API
+Version: 1.0.0
 Authors@R: c(
            person(given = "Jaehyun",
            family = "Joo",

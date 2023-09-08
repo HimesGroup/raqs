@@ -4,7 +4,7 @@
 \name{raqs-package}
 \alias{raqs}
 \alias{raqs-package}
-\title{raqs: An R interface to the US EPA Air Quality System (AQS) API}
+\title{raqs: An R Interface to the US EPA Air Quality System (AQS) API}
 \description{
 Offers functions for fetching JSON data from the US EPA Air Quality System (AQS) API with options to comply with the API rate-limits. See \url{https://aqs.epa.gov/aqsweb/documents/data_api.html} for details of the AQS API.
 }
