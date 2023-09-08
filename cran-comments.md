@@ -14,5 +14,5 @@
 * This is a new submission.
 
 * Possibly misspelled words in DESCRIPTION:
-   - AQS: Air Quality System from U.S. Environmental Protection Agency
+   - AQS: Air Quality System (AQS) from U.S. Environmental Protection Agency
    - JSON: JSON format
