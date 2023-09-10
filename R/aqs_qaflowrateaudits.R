@@ -65,6 +65,8 @@
 ##' @examples
 ##' \dontrun{
 ##'
+##' ## Set your API Key first using set_aqs_user to run the following codes
+##'
 ##' ## Example from the AQS website
 ##' ## Flow rate audit data for Alabama during January 2018
 ##' aqs_variables <- list(

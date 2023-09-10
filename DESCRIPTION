@@ -1,11 +1,11 @@
 Package: raqs
-Title: An R Interface to the US EPA Air Quality System (AQS) API
+Title: Interface to the US EPA Air Quality System (AQS) API
 Version: 1.0.0
 Authors@R: c(
            person(given = "Jaehyun",
            family = "Joo",
            role = c("aut", "cre"),
-           email = "jaehyun.joo@outlook.com"),
+           email = "jaehyunjoo@outlook.com"),
            person(given = "Blanca",
            family = "Himes",
            role = c("aut"))

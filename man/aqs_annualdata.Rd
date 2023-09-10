@@ -198,6 +198,8 @@ user-provided CBSA based on the year portions of \code{bdate} and \code{edate}.
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 ## Example from the AQS website
 ## FRM/FEM PM2.5 data for Wake County, NC for 2016
 ## Only the year portions of bdate and edate are used

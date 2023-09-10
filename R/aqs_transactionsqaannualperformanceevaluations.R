@@ -72,6 +72,8 @@
 ##' @examples
 ##' \dontrun{
 ##'
+##' ## Set your API Key first using set_aqs_user to run the following codes
+##'
 ##' ## Example from the AQS website
 ##' ## Annual performance evaluation data for ozone in Alabama during 2017
 ##' aqs_variables <- list(

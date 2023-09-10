@@ -88,6 +88,8 @@ functionality or the data.
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 aqs_metadata(aqs_filter = "isAvailable")
 metadata_isavailable() # equivalent to above
 

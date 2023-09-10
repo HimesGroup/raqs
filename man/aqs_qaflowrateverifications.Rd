@@ -159,6 +159,8 @@ user-provided filter using the following underlying functions:
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 ## Example from the AQS website
 ## Flow Rate Verification data for Alabama during January 2018
 aqs_variables <- list(

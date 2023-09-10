@@ -51,6 +51,8 @@
 ##' @examples
 ##' \dontrun{
 ##'
+##' ## Set your API Key first using set_aqs_user to run the following codes
+##'
 ##' aqs_list(aqs_filter = "states")
 ##' list_states() # equivalent to above
 ##'

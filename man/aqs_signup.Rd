@@ -9,6 +9,9 @@ aqs_signup(email)
 \arguments{
 \item{email}{A string specifying an email account to register as a user}
 }
+\value{
+No return value, called to sign up for the AQS API
+}
 \description{
 This function helps you create an account or reset a password. Once you
 execute this function, a verification email will be sent to the email
@@ -18,6 +21,8 @@ listed address.
 }
 \examples{
 \dontrun{
+
+## Please use your email address to create an account
 
 aqs_signup(email = "youremail@toregister.com")
 }

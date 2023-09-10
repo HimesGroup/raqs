@@ -17,7 +17,7 @@
 ##' @param email A string specifying your registered email address
 ##' @param key A string specifying your API key
 ##'
-##' @return Set environmental variables
+##' @return No return value, called to set environmental variables
 ##'
 ##' @examples
 ##' ## Please use your registered email and key
@@ -76,10 +76,12 @@ get_aqs_key <- function() {
 ##'
 ##' @param email A string specifying an email account to register as a user
 ##'
-##' @return NULL
+##' @return No return value, called to sign up for the AQS API
 ##'
 ##' @examples
 ##' \dontrun{
+##'
+##' ## Please use your email address to create an account
 ##'
 ##' aqs_signup(email = "youremail@toregister.com")
 ##' }
@@ -101,4 +103,5 @@ aqs_signup <- function(email) {
     req_perform()
   msg <- resp_body_json(aqs_resp, simplifyVector = TRUE)$Data
   message("Success! ", msg)
+  invisible()
 }

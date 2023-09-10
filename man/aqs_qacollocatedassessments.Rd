@@ -159,6 +159,8 @@ user-provided filter using the following underlying functions:
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 ## Example from the AQS website
 ## Collocated assessment data for FRM PM2.5 in Alabama for January 2013
 aqs_variables <- list(

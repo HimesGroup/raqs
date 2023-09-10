@@ -62,6 +62,8 @@
 ##' @examples
 ##' \dontrun{
 ##'
+##' ## Set your API Key first using set_aqs_user to run the following codes
+##'
 ##' ## Example from the AQS website
 ##' ## all benzene samples from North Carolina collected on May 15th, 1995
 ##' aqs_variables <- list(

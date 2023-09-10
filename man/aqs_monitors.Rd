@@ -167,6 +167,8 @@ user-provided CBSA between \code{bdate} and \code{edate}.
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 ## Example from the AQS website
 ## SO2 monitors in Hawaii that were operating on May 01, 2015
 aqs_variables <- list(

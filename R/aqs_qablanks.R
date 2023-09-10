@@ -64,6 +64,8 @@
 ##' @examples
 ##' \dontrun{
 ##'
+##' ## Set your API Key first using set_aqs_user to run the following codes
+##'
 ##' ## Example from the AQS website
 ##' ## PM2.5 blank data for Alabama for January 2018
 ##' aqs_variables <- list(

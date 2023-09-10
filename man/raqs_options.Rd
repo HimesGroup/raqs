@@ -15,9 +15,9 @@ pause 5 seconds between requests.
 \itemize{
 \item \code{raqs.req_per_min} controls the maximum number of API requests per minute.
 Default is 10.
-\item \code{raqs.delay_between_req} controls a delay between API request sent via a
-function. It occurs when your \code{bdate} and \code{edata} inputs span multiple
-years. A value will be rounded to the nearest integer. Default is 5 seconds.
+\item \code{raqs.delay_between_req} controls a delay between API requests sent via a
+function when your \code{bdate} and \code{edate} inputs span multiple years. A value
+will be rounded to the nearest integer. Default is 5 seconds.
 \item \code{raqs.delay_fun_exit} controls a delay before a function execution ends. A
 value will be rounded to the nearest integer. Default is zero if R is being
 used interactively. Otherwise, it is 5 seconds. This option only applies to
@@ -28,7 +28,7 @@ functions that send API requests.
 \section{Option to handle the type of data object to return}{
 
 
-By default, the parsed data will be returned as a 'data.frame' object, but
+By default, the parsed data will be returned as a \link{data.frame} object, but
 can be adjusted for users' preferences.
 \itemize{
 \item \code{raqs.return_type} controls the type of data object to return. Default is

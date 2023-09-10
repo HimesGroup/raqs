@@ -4,4 +4,4 @@
 [![R-CMD-check](https://github.com/HimesGroup/raqs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/HimesGroup/raqs/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-An R interface to the US EPA AQS API to fetch data in JSON format.
+Interface to the US EPA AQS API to fetch data in JSON format.

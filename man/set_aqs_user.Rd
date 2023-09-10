@@ -21,7 +21,7 @@ get_aqs_key()
 \item{key}{A string specifying your API key}
 }
 \value{
-Set environmental variables
+No return value, called to set environmental variables
 }
 \description{
 Set your registered email and key as environmental variables for the current

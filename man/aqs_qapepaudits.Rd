@@ -159,6 +159,8 @@ between \code{bdate} and \code{edate}.
 \examples{
 \dontrun{
 
+## Set your API Key first using set_aqs_user to run the following codes
+
 ## Example from the AQS website
 ## PEP Audit data for FRM PM2.5 in Alabama for 2017
 aqs_variables <- list(
