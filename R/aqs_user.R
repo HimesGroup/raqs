@@ -3,8 +3,7 @@
 ##' Set your registered email and key as environmental variables for the current
 ##' session. Please sign up first using [aqs_signup] if you haven't set up an
 ##' account on the AQS API. If you want to set your email and key permanently,
-##' please add the following lines in your .Renviron file (see
-##' [usethis::edit_r_environ]):
+##' please add the following lines in your .Renviron file:
 ##' \itemize{
 ##'   \item AQS_EMAIL = YOUR REGISTERED EMAIL
 ##'   \item AQS_KEY = YOUR API KEY

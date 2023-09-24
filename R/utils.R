@@ -58,8 +58,8 @@
         end_date)
     ))
     ## Re-format to YYYYMMDD
-    begin <- format(format(begin_date, "%Y%m%d"))
-    end <- format(format(end_date, "%Y%m%d"))
+    begin <- format(begin_date, "%Y%m%d")
+    end <- format(end_date, "%Y%m%d")
   }
   list(bdate = begin, edate = end)
 }

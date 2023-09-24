@@ -19,8 +19,10 @@
   if (is.numeric(x$site)) x$site <- .int_to_str_pad(x$site, width = 4)
   ## Check validity of dates
   if (all(c("bdate", "edate") %in% names(x))) {
+    ## Type casting for better protection against integer YYYYMMDD;
+    x$bdate <- as.character(x$bdate)
+    x$edate <- as.character(x$edate)
     .verify_dates(x$bdate, x$edate)
-    ## x[c("bdate", "edate")] <- .process_multiyear(x$bdate, x$edate)
     if (split_multiyear) {
       x <- replace(x, c("bdate", "edate"), .split_multiyear(x$bdate, x$edate))
     }
@@ -100,7 +102,6 @@
           paste(date_vec, collapse = ", "), ".\n",
           "A ", getOption("raqs.delay_between_req"),
           "-second delay between API requests.")
-  n_req <- length(aqs_url)
   aqs_data <- Map(function(x, y, z) {
     message("- Requesting: ", y)
     resp <- .get_api_data(

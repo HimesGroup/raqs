@@ -35,7 +35,7 @@
 ##' at several concentration levels in the transaction format for AQS.
 ##'
 ##' Each main function has a set of underlying functions that are responsible
-##' for sending requests to specific endpoints (service/filter) and were name
+##' for sending requests to specific endpoints (service/filter) and were named
 ##' with the following scheme: `{service}_{filter}`. Please refer to the manual
 ##' to see how the aforementioned functions work.
 ##'

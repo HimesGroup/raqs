@@ -1,9 +1,8 @@
 ##' AQS API Annual Summary Data service
 ##'
-##' A collection of functions to fetch data summarized at the yearly level. All
-##' quarters for the specified year are returned. Note that only the year
-##' portions of the bdate and edate are used and only whole years of data are
-##' returned.
+##' A collection of functions to fetch data summarized at the yearly level. Note
+##' that only the year portions of the bdate and edate are used and only whole
+##' years of data are returned.
 ##'
 ##' [aqs_annualdata] sends a request to the AQS API based on a user-provided
 ##' filter using the following underlying functions:

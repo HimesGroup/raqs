@@ -165,11 +165,10 @@ header and data.
 \description{
 A collection of functions to fetch data summarized at the calendar quarter
 level. Data is labeled with quarter number (Q1 = Jan - Mar, Q2 = Apr - Jun,
-Q3 = Jul - Sep, Q4 = Oct - Dec). All quarters for the specified year are
-returned. Note that only the year portion of the bdate and edate are used
-and all 4 quarters in the year are returned. In addition, \code{duration} is not
-allowed on the API unlike \link{aqs_sampledata}, \link{aqs_dailydata}, and
-\link{aqs_annualdata}.
+Q3 = Jul - Sep, Q4 = Oct - Dec). Note that only the year portion of the
+bdate and edate are used and all 4 quarters in the year are returned. In
+addition, \code{duration} is not allowed on the API unlike \link{aqs_sampledata},
+\link{aqs_dailydata}, and \link{aqs_annualdata}.
 }
 \details{
 \link{aqs_quarterlydata} sends a request to the AQS API based on a user-provided
